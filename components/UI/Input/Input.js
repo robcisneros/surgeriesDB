@@ -1,7 +1,7 @@
 import React, { useRef, useImperativeHandle } from "react";
 import classes from "./Input.module.css";
 
-const Input = ({ id, label, type, isValid, value, onChange, onBlur }, ref) => {
+const Input = ({ id, label, type, isValid, value, onChange, onBlur, placeholder }, ref) => {
   const inputRef = useRef();
 
   const activate = () => {
@@ -30,6 +30,7 @@ const Input = ({ id, label, type, isValid, value, onChange, onBlur }, ref) => {
         value={value}
         onChange={onChange}
         onBlur={onBlur}
+        placeholder={placeholder}
       />
     </div>
   );
