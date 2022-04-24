@@ -1,0 +1,12 @@
+.nav_container nav {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.nav_container ul {
+    list-style: none;
+}
+.nav_container li {
+    text-decoration: none;
+}
+.logo{}
