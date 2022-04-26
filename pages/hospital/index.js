@@ -1,7 +1,6 @@
 //our-domain.com/hospital
 
-import React, { useEffect, useState } from "react";
-import useHttp from "../../components/hooks/use-http";
+import React from "react";
 import MainTable from "../../components/MainTable";
 import Card from "../../components/UI/Card/Card";
 import classes from "./hospital.module.css";

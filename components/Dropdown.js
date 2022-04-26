@@ -10,7 +10,7 @@ const Dropdown = (props) => {
         </option>
         {props.hospitals.map((item) => {
           return (
-            <option key={item.id} value={item.id}>
+            <option key={item.id} value={item.id} name={item.name}>
               {item.name}
             </option>
           );

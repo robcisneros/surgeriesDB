@@ -1,37 +1,25 @@
-import { Container, Nav, Navbar } from "react-bootstrap"
-import React, { useContext } from "react";
-import AuthContext from '../store/auth-context'
-import Button from '../UI/Button/Button'
-
-import classes from "./CollapseNavbar.module.css"
+import { Container, Nav, Navbar } from "react-bootstrap";
+import React from "react";
+import {AiOutlineBars} from "react-icons/ai"
+import classes from "./CollapseNavbar.module.css";
 import Link from "next/link";
+import iconclasses from "./ReactIcons.module.css"
 const CollapseNavbar = () => {
-  const ctx = useContext(AuthContext)
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
   return (
-    // <Navbar collapseOnSelect expand="sm" bg="dark" variant="dark" fixed="top">
-    //   <Container>
-    //     <Navbar.Brand href="/">Search for surgeries</Navbar.Brand>
-    //     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-    //     <Navbar.Collapse id="responsive-navbar-nav">
-    //       <Nav className="justify-content-end" style={{ width: "100%" }}>
-    //         <Nav.Link href="/">Home</Nav.Link>
-    //         {ctx.isLoggedIn && <Nav.Link href="/hospital">Hospitales</Nav.Link>}
-    //         {ctx.isLoggedIn && <Button onClick={ctx.onLogout}>Logout</Button>}
-    //       </Nav>
-    //     </Navbar.Collapse>
-    //   </Container>
-    // </Navbar>
-    <nav className={classes.nav_container}>
-      <label className={classes.logo} >Search for surgeries</label>
-      <ul>
-        <li>
-          <Link href="/" as={`/`}>Home</Link>
-        </li>
-        <li>
-          <Link href="/hospital" as={`/hospital`}>Hospital</Link>
-        </li>
-      </ul>
-    </nav>
-  )
-}
+    <Navbar collapseOnSelect expand="sm" bg="dark" variant="dark" fixed="top">
+      <Container  className={classes.linkscss}>
+        <Link href="/"  as={`/`}>Search for surgeries</Link>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="justify-content-end" style={{ width: "100%" }}>
+            <Link href="/" as={`/`}>Home</Link>
+            <Link href="/hospital" as={`/hospital`}>Hospitales</Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+  );
+};
 export default CollapseNavbar;

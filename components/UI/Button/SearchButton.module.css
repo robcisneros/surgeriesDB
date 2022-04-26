@@ -1,20 +1,20 @@
 .button {
     font: inherit;
     border: 1px solid #0d010f;
-    background: rgb(11, 147, 201);
+    background: black;
     color: white;
     padding: 0.6rem 2.0rem;
     cursor: pointer;
-    font-size: 1.15rem;
+    font-size: 20px;
     border-radius: 30px;
   }
   
-  /* .button:active, 
+  .button:active, 
   .button:hover
    {
     background: rgb(51, 49, 49);
     border-color: black;
-  }*/
+  }
   
   .button:focus {
     outline: none;

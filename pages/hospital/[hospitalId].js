@@ -1,18 +1,15 @@
 import SurgeriesTable from "../../components/SurgeriesTable";
 import Card from "../../components/UI/Card/Card";
 import styles from "../../styles/Home.module.css";
-import React, { useContext } from "react";
-import AuthContext from "../../components/store/auth-context";
+import React from "react";
 
 function DetailPage(props) {
-  const ctx = useContext(AuthContext);
-
   return (
     <div className={styles.container}>
       <main className={styles.main}>
         <Card>
-          {ctx.isLoggedIn && <h2>Hola </h2>}
-          {ctx.isLoggedIn && <SurgeriesTable importedData={props.exportedData} />}
+          <h2> {props.exportedData[0].hospitalname} </h2>
+          <SurgeriesTable importedData={props.exportedData} />
         </Card>
       </main>
 
@@ -56,6 +53,7 @@ export async function getStaticProps(context) {
     return {
       id: dataItem.idprocedimiento,
       name: dataItem.surgeryname,
+      hospitalname: dataItem.hospitalname,
     };
   });
   return {

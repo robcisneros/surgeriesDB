@@ -1,12 +1,9 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import Login from "../components/Login/Login";
-import React, { useContext } from "react";
-import AuthContext from "../components/store/auth-context";
+import React from "react";
 import HomeComponent from "../components/Home/HomeComponent";
 
 export default function Home(props) {
-  const ctx = useContext(AuthContext);
 
   return (
     <div className={styles.container}>
@@ -21,8 +18,7 @@ export default function Home(props) {
 
       <main className={styles.main}>
         <h1>Consulta los procedimientos en tu hospital:</h1>
-        {!ctx.isLoggedIn && <Login />}
-        {ctx.isLoggedIn && <HomeComponent hospitals={props.allHospitals} />}
+        <HomeComponent hospitals={props.allHospitals} />
       </main>
 
       <footer className={styles.footer}>

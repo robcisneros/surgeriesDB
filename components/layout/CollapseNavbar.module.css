@@ -1,12 +1,35 @@
-.nav_container nav {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-.nav_container ul {
-    list-style: none;
-}
-.nav_container li {
+
+.linkscss a{
     text-decoration: none;
+    color: white;
+    font-size: 17px;
+    text-transform: uppercase;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-align: center;
 }
-.logo{}
+
+.linkscss a:active,
+.linkscss a.active,
+.linkscss a:hover {
+  font-weight: 550;
+  background-color: rgba(158, 156, 156, 0.2);
+}
+
+
+@media (max-width: 600px) {
+  .navContainer ul li a {
+    font-size: 15px;
+  }
+  label.logo {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 560px) {
+  .linkscss a:active,
+  .linkscss a:hover {
+    background-color: rgba(158, 156, 156, 0.2);
+    font-weight: 550;
+  }
+}
