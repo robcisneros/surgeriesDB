@@ -26,7 +26,7 @@ function DetailPage(props) {
   );
 }
 export async function getStaticPaths() {
-  const response = await fetch("http://localhost:9000/api/hospitales");
+  const response = await fetch("https://backend-surgeries.herokuapp.com/api/hospitales");
   const data = await response.json();
 
   const paths = data.map((dataItem) => {
@@ -45,7 +45,7 @@ export async function getStaticProps(context) {
   const hospitalId = context.params.hospitalId;
   console.log(hospitalId);
   // fetch data from an API
-  const response = await fetch("http://localhost:9000/api/" + hospitalId);
+  const response = await fetch("https://backend-surgeries.herokuapp.com/api/" + hospitalId);
   const surgeriesPerHospital = await response.json();
   
   let exportedData = [];

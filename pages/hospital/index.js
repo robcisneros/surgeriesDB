@@ -23,7 +23,7 @@ function HospitalPage(props) {
 
 export async function getStaticProps() {
   // fetch data from an API
-  const response = await fetch("http://localhost:9000/api/hospitales");
+  const response = await fetch("https://backend-surgeries.herokuapp.com/api/hospitales");
   const data = await response.json();
 
   let allHospitals = [];
