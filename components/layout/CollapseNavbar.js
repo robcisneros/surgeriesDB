@@ -1,9 +1,7 @@
 import { Container, Nav, Navbar } from "react-bootstrap";
 import React from "react";
-import {AiOutlineBars} from "react-icons/ai"
 import classes from "./CollapseNavbar.module.css";
 import Link from "next/link";
-import iconclasses from "./ReactIcons.module.css"
 const CollapseNavbar = () => {
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
